@@ -15,6 +15,8 @@ ARTIFACTS := $(foreach p,$(PLATFORMS),\
 build: test
 	@go build -ldflags "-s -w"
 
+all: $(PLATFORMS)
+
 clean:
 	$(RM) $(ARTIFACTS)
 
